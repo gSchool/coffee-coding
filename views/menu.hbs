@@ -1,0 +1,26 @@
+<figure class="hero">
+    <img src="images/coffee_2.png" alt="Refreshing snack!" />
+</figure>
+<section>
+    <h2>Menu Items</h2>
+    <form method="POST" action="addons">
+        <select onchange="this.form.submit();">
+            <option disabled selected>Coffee</option>
+            <option>Americano</option>
+            <option>Espresso</option>
+            <option>Latte</option>
+            <option>Cappucino</option>
+            <option>Macchiato</option>
+            <option>Mocha</option>
+            <option>Cold Brew</option>
+        </select>
+    </form>
+    <form method="POST" action="summary">
+        <select onchange="this.form.submit();">
+            <option disabled selected>Pastries</option>
+            <option>Danish</option>
+            <option>Strudel</option>
+            <option>Baklava</option>
+        </select>
+    </form>
+</section>
