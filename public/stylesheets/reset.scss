@@ -1,0 +1,21 @@
+body, figure {
+    margin: 0;
+}
+
+a {
+    color: $primary-color;
+}
+
+h1, h2 {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}

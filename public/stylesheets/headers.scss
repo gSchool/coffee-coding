@@ -1,0 +1,20 @@
+.logo {
+    padding: 6rem 4rem 0 4rem;
+}
+
+.wordmark {
+    padding: 3rem 5rem 1rem 5rem;
+}
+
+.order-confirmation, .order-summary, .orders {
+    > h2 {
+        display: block;
+        font-size: 1rem;
+        font-family: "Museo Sans Black";
+        background-color: $primary-color;
+        color: $white;
+        padding: 1rem;
+        border-radius: 5px;
+        margin: 0;
+    }
+}

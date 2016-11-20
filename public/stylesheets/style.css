@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "Museo Sans";
+  src: url("../fonts/museo-sans-500.otf"); }
+
+@font-face {
+  font-family: "Museo Sans Bold";
+  src: url("../fonts/museo-sans-700.otf"); }
+
+@font-face {
+  font-family: "Museo Sans Black";
+  src: url("../fonts/museo-sans-900.otf"); }
+
+body, figure {
+  margin: 0; }
+
+a {
+  color: #212145; }
+
+h1, h2 {
+  display: none; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+body {
+  font-family: "Museo Sans";
+  color: #212145;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eee; }
+
+main {
+  max-width: 400px;
+  background-color: #fff;
+  min-height: 600px;
+  min-width: 300px; }
+
+section {
+  padding: 1rem;
+  position: relative; }
+
+.login {
+  margin-top: 2rem; }
+
+.sign-up p {
+  width: 100%;
+  text-align: center;
+  color: #b3b3b3; }
+
+.logo {
+  padding: 6rem 4rem 0 4rem; }
+
+.wordmark {
+  padding: 3rem 5rem 1rem 5rem; }
+
+.order-confirmation > h2, .order-summary > h2, .orders > h2 {
+  display: block;
+  font-size: 1rem;
+  font-family: "Museo Sans Black";
+  background-color: #212145;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0; }
+
+select {
+  font-family: "Museo Sans Black";
+  width: 100%;
+  display: block;
+  background-color: #212145;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem;
+  margin-bottom: 0.55rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem; }
+  select option {
+    width: 100%;
+    background-color: #fff;
+    color: #b3b3b3;
+    border-bottom: 1px solid #212145;
+    font-family: "Museo Sans";
+    font-size: 1.5rem; }
+
+input {
+  border-radius: 5px;
+  border: 1px solid #212145;
+  padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+  margin-bottom: 0.40rem;
+  width: 100%;
+  font-family: "Museo Sans";
+  box-sizing: border-box; }
+  input[type="submit"] {
+    font-family: "Museo Sans Black";
+    color: #212145;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 1rem;
+    transition: all 0.2s; }
+    input[type="submit"]:hover {
+      background-color: #babade;
+      color: white; }
+    input[type="submit"]:active {
+      background-color: #212145;
+      color: #fff; }
+
+.line-items {
+  margin-bottom: 1.5rem; }
+  .line-items li {
+    color: #b3b3b3;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #212145;
+    padding: 1rem 0.5rem 1rem 1rem; }
+
+.orders ul {
+  margin-left: 1rem; }
+  .orders ul li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #212145; }
+    .orders ul li > div:not(:last-child) {
+      margin-bottom: 1rem; }
+    .orders ul li .submittal output {
+      display: flex;
+      justify-content: space-between; }
+    .orders ul li output {
+      display: block; }
+
+.orders .line-items {
+  margin: 0; }
+  .orders .line-items li {
+    border-bottom: none;
+    padding: 0; }
+
+.orders .customer label, .orders .order label, .orders .submittal label {
+  color: #212145; }
+
+.orders .customer output, .orders .order output, .orders .submittal output {
+  color: #b3b3b3; }
+
+.orders .confirmation-message p {
+  text-align: center;
+  color: #212145;
+  font-family: "Museo Sans Bold"; }
+  .orders .confirmation-message p:first-child {
+    border: 1px solid #212145;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 3rem; }
+
+.orders .confirmation-message strong {
+  font-family: "Museo Sans Black";
+  font-size: 1.25rem;
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=style.css.map */

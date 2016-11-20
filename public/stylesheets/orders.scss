@@ -1,0 +1,52 @@
+.orders {
+    ul {
+        margin-left: 1rem;
+        li {
+            padding: 1rem 0;
+            border-bottom: 1px solid $primary-color;
+            & > div:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+            .submittal output {
+                display: flex;
+                justify-content: space-between;
+            }
+            output {
+                display: block;
+            }
+        }
+    }
+    .line-items {
+        margin: 0;
+        li {
+            border-bottom: none;
+            padding: 0;
+        }
+    }
+    .customer, .order, .submittal {
+        label {
+            color: $primary-color;
+        }
+        output {
+            color: $light-grey;
+        }
+    }
+    .confirmation-message {
+        p {
+            text-align: center;
+            color: $primary-color;
+            font-family: "Museo Sans Bold";
+            &:first-child {
+                border: 1px solid $primary-color;
+                border-radius: 5px;
+                padding: 0.5rem 1rem;
+                margin-bottom: 3rem;
+            }
+        }
+        strong {
+            font-family: "Museo Sans Black";
+            font-size: 1.25rem;
+            text-transform: uppercase;
+        }
+    }
+}
