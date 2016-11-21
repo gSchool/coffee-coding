@@ -7,10 +7,6 @@
             & > div:not(:last-child) {
                 margin-bottom: 1rem;
             }
-            .submittal output {
-                display: flex;
-                justify-content: space-between;
-            }
             output {
                 display: block;
             }
@@ -23,30 +19,66 @@
             padding: 0;
         }
     }
-    .customer, .order, .submittal {
-        label {
-            color: $primary-color;
-        }
-        output {
-            color: $light-grey;
+}
+
+.confirmation-message {
+    p {
+        text-align: center;
+        color: $primary-color;
+        font-family: "Museo Sans Bold";
+        &:first-child {
+            border: 1px solid $primary-color;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            margin-bottom: 3rem;
         }
     }
-    .confirmation-message {
-        p {
-            text-align: center;
-            color: $primary-color;
-            font-family: "Museo Sans Bold";
-            &:first-child {
-                border: 1px solid $primary-color;
-                border-radius: 5px;
-                padding: 0.5rem 1rem;
-                margin-bottom: 3rem;
-            }
+    strong {
+        font-family: "Museo Sans Black";
+        font-size: 1.25rem;
+        text-transform: uppercase;
+    }
+}
+
+.line-items {
+    margin-bottom: 1.5rem;
+    li {
+        color: $light-grey;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $primary-color;
+        padding: 1rem 0.5rem 1rem 1rem;
+    }
+}
+
+.totals {
+    margin-bottom: 1rem;
+    li {
+        text-align: right;
+    }
+}
+
+.submittal output {
+    display: flex;
+    justify-content: space-between;
+    time {
+        color: $light-grey;
+    }
+}
+
+.order-admin {
+    > ul {
+        padding-left: 1rem;
+    }
+    .line-items {
+        margin-bottom: 0;
+        li {
+            border: none;
+            padding: 0;
         }
-        strong {
-            font-family: "Museo Sans Black";
-            font-size: 1.25rem;
-            text-transform: uppercase;
-        }
+    }
+    .customer-order {
+        border-bottom: 1px solid $primary-color;
+        padding: 1rem 0;
     }
 }

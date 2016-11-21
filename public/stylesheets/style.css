@@ -60,7 +60,7 @@ section {
 .wordmark {
   padding: 3rem 5rem 1rem 5rem; }
 
-.order-confirmation > h2, .order-summary > h2, .orders > h2 {
+.order-admin > h2, .order-confirmation > h2, .order-summary > h2, .orders > h2 {
   display: block;
   font-size: 1rem;
   font-family: "Museo Sans Black";
@@ -114,15 +114,6 @@ input {
       background-color: #212145;
       color: #fff; }
 
-.line-items {
-  margin-bottom: 1.5rem; }
-  .line-items li {
-    color: #b3b3b3;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #212145;
-    padding: 1rem 0.5rem 1rem 1rem; }
-
 .orders ul {
   margin-left: 1rem; }
   .orders ul li {
@@ -130,9 +121,6 @@ input {
     border-bottom: 1px solid #212145; }
     .orders ul li > div:not(:last-child) {
       margin-bottom: 1rem; }
-    .orders ul li .submittal output {
-      display: flex;
-      justify-content: space-between; }
     .orders ul li output {
       display: block; }
 
@@ -142,25 +130,52 @@ input {
     border-bottom: none;
     padding: 0; }
 
-.orders .customer label, .orders .order label, .orders .submittal label {
-  color: #212145; }
-
-.orders .customer output, .orders .order output, .orders .submittal output {
-  color: #b3b3b3; }
-
-.orders .confirmation-message p {
+.confirmation-message p {
   text-align: center;
   color: #212145;
   font-family: "Museo Sans Bold"; }
-  .orders .confirmation-message p:first-child {
+  .confirmation-message p:first-child {
     border: 1px solid #212145;
     border-radius: 5px;
     padding: 0.5rem 1rem;
     margin-bottom: 3rem; }
 
-.orders .confirmation-message strong {
+.confirmation-message strong {
   font-family: "Museo Sans Black";
   font-size: 1.25rem;
   text-transform: uppercase; }
+
+.line-items {
+  margin-bottom: 1.5rem; }
+  .line-items li {
+    color: #b3b3b3;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #212145;
+    padding: 1rem 0.5rem 1rem 1rem; }
+
+.totals {
+  margin-bottom: 1rem; }
+  .totals li {
+    text-align: right; }
+
+.submittal output {
+  display: flex;
+  justify-content: space-between; }
+  .submittal output time {
+    color: #b3b3b3; }
+
+.order-admin > ul {
+  padding-left: 1rem; }
+
+.order-admin .line-items {
+  margin-bottom: 0; }
+  .order-admin .line-items li {
+    border: none;
+    padding: 0; }
+
+.order-admin .customer-order {
+  border-bottom: 1px solid #212145;
+  padding: 1rem 0; }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,6 +12,7 @@ var addons = require("./routes/addons");
 var summary = require("./routes/summary");
 var confirmation = require("./routes/confirmation");
 var orders = require("./routes/orders");
+var orderItems = require("./routes/order-items");
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.use("/addons", addons);
 app.use("/summary", summary);
 app.use("/confirmation", confirmation);
 app.use("/orders", orders);
+app.use("/order-items", orderItems);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

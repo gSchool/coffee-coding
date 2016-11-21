@@ -47,14 +47,3 @@ input {
         }
     }
 }
-
-.line-items {
-    margin-bottom: 1.5rem;
-    li {
-        color: $light-grey;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid $primary-color;
-        padding: 1rem 0.5rem 1rem 1rem;
-    }
-}

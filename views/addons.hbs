@@ -3,16 +3,15 @@
 </figure>
 <section>
     <h2>Addons</h2>
-    <form method="POST" action="summary">
-        <select onchange="this.form.submit();">
+    <form method="POST" action="order-items">
+        <select name="addonId" onchange="this.form.submit();">
             <option disabled selected>Add-ons</option>
-            <option>Skim Milk</option>
-            <option>1% Milk</option>
-            <option>Whole Milk</option>
-            <option>Almond Milk</option>
-            <option>Coconut Milk</option>
-            <option>Soy Milk</option>
-            <option>Cream</option>
+            {{#each addons}}
+                <option value="{{id}}">{{name}}</option>
+            {{/each}}
         </select>
+        <input type="hidden" name="itemId" value="{{itemId}}" />
+        <input type="hidden" name="itemType" value="coffee" />
+        <input type="submit" value="None" />
     </form>
 </section>

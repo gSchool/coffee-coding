@@ -1,61 +1,47 @@
 <figure class="wordmark">
     <img src="images/huckleberry_wordmark.png" alt="Huckleberry" />
 </figure>
-<section class="orders">
+<section class="order-admin">
     <h2>Orders</h2>
     <ul>
-        <li>
-            <div class="customer">
-                <label>Customer</label>
-                <output>Elyse Coberly</output>
-            </div>
-            <div class="order">
-                <label>Order</label>
-                <output>
-                    <ul class="line-items">
-                        <li>
-                            <span class="item">Espresso - Cream</span>
-                            <span class="price">$6</span>
-                        </li>
-                    </ul>
-                </output>
-            </div>
-            <div class="submittal">
-                <label>Received</label>
-                <output>
-                    <time class="date">11.16.16</time>
-                    <time class="time">11:13am</time>
-                </output>
-            </div>
-        </li>
-        <li>
-            <div class="customer">
-                <label>Customer</label>
-                <output>Kyle Coberly</output>
-            </div>
-            <div class="order">
-                <label>Order</label>
-                <output>
-                    <ul class="line-items">
-                        <li>
-                            <span class="item">Espresso - Cream</span>
-                            <span class="price">$6</span>
-                        </li>
-                        <li>
-                            <span class="item">Espresso - Cream</span>
-                            <span class="price">$6</span>
-                        </li>
-                    </ul>
-                </output>
-            </div>
-            <div class="submittal">
-                <label>Received</label>
-                <output>
-                    <time class="date">11.16.16</time>
-                    <time class="time">11:03am</time>
-                </output>
-            </div>
-        </li>
+        {{#each orders}}
+            <li class="customer-order">
+                <div class="customer">
+                    <label>Customer</label>
+                    <output>{{customerName}}</output>
+                </div>
+                <div class="order">
+                    <label>Order</label>
+                    <output>
+                        <ul class="line-items">
+                            {{#each orderItems}}
+                                <li>
+                                    <span class="item" data-item-id="{{id}}">
+                                        {{name}}
+                                        {{#if addon}}
+                                            <span data-addon-id="{{addon.id}}"> - {{addon.name}}</span>
+                                        {{/if}}
+                                    </span>
+                                    <span class="price">{{price}}</span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <ul class="totals">
+                            <li>Subtotal: {{../helpers.to2 subtotal}}</li>
+                            <li>Tax: {{../helpers.to2 tax}}</li>
+                            <li>Grand Total: {{../helpers.to2 grandTotal}}</li>
+                        </ul>
+                    </output>
+                </div>
+                <div class="submittal">
+                    <label>Received</label>
+                    <output>
+                        <time class="date">{{orderDay}}</time>
+                        <time class="time">{{orderTime}}</time>
+                    </output>
+                </div>
+            </li>
+        {{/each}}
     </ul>
 </section>
 

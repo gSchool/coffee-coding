@@ -5,9 +5,24 @@
     <h2>Order Summary</h2>
     <form method="POST" action="orders">
         <ul class="line-items">
-            <li><span class="item">Americano - 1% Milk</span><span class="price">$5</span></li>
-            <li><span class="item">Espresso - Cream</span><span class="price">$6</span></li>
+            {{#each order.orderItems}}
+                <li>
+                    <span class="item" data-item-id="{{id}}">
+                        {{name}}
+                        {{#if addon}}
+                            <span data-addon-id="{{addon.id}}"> - {{addon.name}}</span>
+                        {{/if}}
+                    </span>
+                    <span class="price">{{price}}</span>
+                </li>
+            {{/each}}
         </ul>
+        <ul class="totals">
+            <li>Subtotal: {{helpers.to2 order.subtotal}}</li>
+            <li>Tax: {{helpers.to2 order.tax}}</li>
+            <li>Grand Total: {{helpers.to2 order.grandTotal}}</li>
+        </ul>
+        <p><a href="menu">Add another item</a></p>
         <input type="submit" value="Place Order" />
     </form>
 </section>
